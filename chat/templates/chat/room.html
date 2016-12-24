@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks active">Chat</a></li>
+  <li><a href="/upload" class="tablinks">Upload</a></li>
+</ul>
+
   {% load staticfiles %}
   <h1>{{ request.user.username }}</h1>
   <a id="logout_link" href="/logout">Logout</a>

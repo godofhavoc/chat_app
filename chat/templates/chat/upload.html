@@ -3,6 +3,11 @@
 
 {% block content %}
 
+<ul class="tab">
+  <li><a href="/chat" class="tablinks">Chat</a></li>
+  <li><a href="javascript:void(0)" class="tablinks active">Upload</a></li>
+</ul>
+
 <h1>UPLOAD</h1>
 <form id="upload_form" method="post" enctype="multipart/form-data" action="/upload/">
     {% csrf_token %}
