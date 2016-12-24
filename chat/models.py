@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
 
+def resort_path(instance, filename):
+    url = instance.place + '/' + filename
+    return url
 # Create your models here.
 # class Room(models.Model):
 #     name = models.TextField()
@@ -27,3 +30,7 @@ class Messages(models.Model):
 
     def as_dict(self):
         return {'handle': self.handle, 'message': self.message, 'timestamp': self.formatted_timestamp}
+
+class ResortDocument(models.Model):
+    place = models.CharField(max_length=200)
+    document = models.FileField(upload_to=resort_path)

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>UPLOAD</h1>
+<form id="upload_form" method="post" enctype="multipart/form-data" action="/upload/">
+    {% csrf_token %}
+    <input type="file" id='input_file' name='input_file' />
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}

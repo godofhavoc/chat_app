@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^chat/', include('chat.urls', namespace='chat')),
+    url(r'^upload/', views.upload_resorts),
 ]
